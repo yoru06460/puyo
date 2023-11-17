@@ -85,7 +85,7 @@ class field {
 		nextBlock.offer(tmp1); nextBlock.offer(tmp2);
 	}
 	
-	//任意の座標の周りの要素を取得
+	//座標の周りの要素を取得
 	//同じ要素があればその要素の座標を中心としてもう一度実行
 	//なければreturn
 	//4回実行されたらdestroyBlock()実行
@@ -103,8 +103,6 @@ class field {
 		/*
 		listにPosの値を代入しておく
 		探査回数が3以上でElementを0に
-		下のcontainsを使用するとうまくいかず
-		if(desPos.contains(tPos)) {return;}
 		*/ 
 		
 		//消去リストに探査する座標は含まれているか

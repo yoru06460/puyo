@@ -307,7 +307,6 @@ class  Anim2D  extends  JPanel  implements  KeyListener, MouseMotionListener, Mo
     }
     
     test_f.setOpeBlock();//fieldArrayにブロックをセット
-    //opeBlockの中にまだ座標が残ってるから再度setされる(修正済み)
     
     
     

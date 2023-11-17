@@ -51,26 +51,25 @@ class display {
 	
 	public void scoreDraw(score s, Graphics g) {
 		g.setColor(new Color(0,0,0));
-		Font f = new Font("ƒƒCƒŠƒI" , Font.BOLD , 40);
+		Font f = new Font("   C   I" , Font.BOLD , 40);
 		g.setFont(f);
 		FontMetrics fontMetrics = g.getFontMetrics();
 		g.drawString("score:", BW*10, BH*5);
 		g.drawString(Integer.toString(s.score),BW*17-fontMetrics.stringWidth(Integer.toString(s.score)), BH*6);
 		
-		f = new Font("ƒƒCƒŠƒI" , Font.BOLD , 20);
+		f = new Font("   C   I" , Font.BOLD , 20);
 		g.setFont(f);
-		g.drawString("Å‘å˜A½:", BW*12, BH*4);
+		g.drawString(" Å‘ A  :", BW*12, BH*4);
 		g.drawString(Integer.toString(s.maxChainNum),BW*17-fontMetrics.stringWidth(Integer.toString(s.maxChainNum)), BH*4);
 		
 		if(s.chainNum!=0) {
-			f = new Font("ƒƒCƒŠƒI" , Font.PLAIN , 20);
+			f = new Font("   C   I" , Font.PLAIN , 20);
 			g.setFont(f);
-			g.drawString(s.chainNum+"‚ê‚ñ‚³!",BW*9-fontMetrics.stringWidth(Integer.toString(s.chainNum)), BH*10);
+			g.drawString(s.chainNum+"   !",BW*9-fontMetrics.stringWidth(Integer.toString(s.chainNum)), BH*10);
 		}
 	}
 	
 	public void drawNextBlock(field a, Graphics g, JPanel p) {
-		//queue‚ğ‚·‚×‚Äæ‚èo‚µ‚Ä•\¦‚µA‚à‚¤ˆê“x“ü‚ê’¼‚·
 		List<int[]> tmp = new ArrayList<int[]>();
 		for(int i = 0; i < 6; i++) {
 			tmp.add(a.nextBlock.poll());
